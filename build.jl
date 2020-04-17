@@ -23,7 +23,11 @@ no_test = String[
     "Turing",
 ]
 
+exclude_from_sysimage = String[
+]
+
 SimpleContainerGenerator.create_dockerfile(pkgs;
+                                           # exclude_from_sysimage = exclude_from_sysimage,
                                            julia_version = v"1.4.0",
                                            no_test = no_test)
 
