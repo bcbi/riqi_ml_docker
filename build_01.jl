@@ -39,5 +39,3 @@ SimpleContainerGenerator.create_dockerfile(pkgs;
                                            no_test = no_test)
 
 run(`docker build -t aluthge/riqi_ml .`)
-
-run(`docker push aluthge/riqi_ml`)
