@@ -4,7 +4,7 @@ mkpath("riqi_ml")
 
 cd("riqi_ml")
 
-pkgs = String[
+pkgs = [
     (name = "Econometrics", version = "0.2.6"), 
     (name = "MCMCChains", version = "3.0.12"), 
     # (name = "Plots", version = "0.28.4"), 
