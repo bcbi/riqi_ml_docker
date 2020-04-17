@@ -16,6 +16,7 @@ pkgs = [
 ]
 
 no_test = String[
+    "MCMCChains",
     "Turing",
 ]
 
