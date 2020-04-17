@@ -6,7 +6,7 @@ It is available on Docker Hub here: https://hub.docker.com/r/aluthge/riqi_ml
 
 ---
 
-The code to build the Docker image is available in the [`build.jl`](build.jl) file in this repository.
+The code to build the Docker image and push it to Docker Hub is available in the [`build.jl`](build.jl) file in this repository.
 
 ---
 
