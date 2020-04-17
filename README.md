@@ -1,6 +1,6 @@
 # riqi_ml
 
-`riqi_ml` is a Docker image that contains PredictMD, Turing, and other useful machine learning packages.
+`riqi_ml` is a Docker image for doing machine learning with RIQI datasets. It contains PredictMD, Turing, and other useful machine learning packages.
 
 It is available on Docker Hub here: https://hub.docker.com/r/aluthge/riqi_ml
 
