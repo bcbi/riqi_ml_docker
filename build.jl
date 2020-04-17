@@ -15,13 +15,13 @@ pkgs = [
     (name = "Turing", version = "0.9.2"),
 ]
 
-notest = String[
+no_test = String[
     "Turing",
 ]
 
 SimpleContainerGenerator.create_dockerfile(pkgs;
                                            julia_version = v"1.4.0",
-                                           notest = notest)
+                                           no_test = no_test)
 
 run(`docker build -t aluthge/riqi_ml .`)
 
