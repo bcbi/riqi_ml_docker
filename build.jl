@@ -19,7 +19,7 @@ no_test = String[
     "MCMCChains",
     "PredictMD",
     "PredictMDExtra",
-    "PredictMDFull"
+    "PredictMDFull",
     "Turing",
 ]
 
