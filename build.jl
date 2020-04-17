@@ -4,7 +4,7 @@ mkpath("riqi_ml")
 
 cd("riqi_ml")
 
-pkgs = [
+pkgs = String[
     (name = "Econometrics", version = "0.2.6"), 
     (name = "MCMCChains", version = "3.0.12"), 
     # (name = "Plots", version = "0.28.4"), 
@@ -15,7 +15,13 @@ pkgs = [
     (name = "Turing", version = "0.9.2"),
 ]
 
-SimpleContainerGenerator.create_dockerfile(pkgs; julia_version = v"1.4.0")
+notest = String[
+    "Turing",
+]
+
+SimpleContainerGenerator.create_dockerfile(pkgs;
+                                           julia_version = v"1.4.0",
+                                           notest = notest)
 
 run(`docker build -t aluthge/riqi_ml .`)
 
