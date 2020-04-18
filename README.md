@@ -7,9 +7,10 @@ It is available on Docker Hub as `aluthge/riqi_ml` here: https://hub.docker.com/
 ---
 
 Files in this repository:
-1. [`build_01.jl`](build_01.jl): Build the Docker image
-2. [`test_02.jl`](test_02.jl): Run some very basic/minimal tests on the newly build Docker image
-3. [`push_03.jl`](push_03.jl): Push the Docker image to Docker Hub
+1. [`01_create_dockerfile.jl`](01_create_dockerfile.jl): Create the Dockerfile and some helper files
+2. [`02_build.jl`](02_build.jl): Build the Docker image
+3. [`03_test.jl`](03_test.jl): Run some very basic/minimal tests on the newly build Docker image
+4. [`04_push.jl`](04_push.jl): Push the Docker image to Docker Hub
 
 ---
 
