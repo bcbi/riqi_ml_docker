@@ -7,8 +7,10 @@ cd("riqi_ml")
 pkgs = [
     (name = "Clustering", version = "0.14.0",),
     (name = "Econometrics", version = "0.2.6",),
+    (name = "GR",),
     (name = "MCMCChains", version = "3.0.12",),
     (name = "MultivariateStats", version = "0.7.0",),
+    (name = "PlotRecipes",),
     (name = "Plots",),
     (name = "PredictMD", version = "0.34.17",),
     (name = "PredictMDExtra", version = "0.13.15",),
