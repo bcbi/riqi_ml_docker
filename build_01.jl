@@ -5,15 +5,15 @@ mkpath("riqi_ml")
 cd("riqi_ml")
 
 pkgs = [
-    (name = "Clustering", version = "0.14.0",), 
-    (name = "Econometrics", version = "0.2.6",), 
-    (name = "MCMCChains", version = "3.0.12",), 
+    (name = "Clustering", version = "0.14.0",),
+    (name = "Econometrics", version = "0.2.6",),
+    (name = "MCMCChains", version = "3.0.12",),
     (name = "MultivariateStats", version = "0.7.0",),
-    (name = "Plots",), 
-    (name = "PredictMD", version = "0.34.17",), 
-    (name = "PredictMDExtra", version = "0.13.15",), 
-    (name = "PredictMDFull", version = "0.13.7",), 
-    (name = "StatsPlots",), 
+    (name = "Plots",),
+    (name = "PredictMD", version = "0.34.17",),
+    (name = "PredictMDExtra", version = "0.13.15",),
+    (name = "PredictMDFull", version = "0.13.7",),
+    (name = "StatsPlots",),
     (name = "Turing", version = "0.11.0",),
     (name = "UnicodePlots",),
 ]
