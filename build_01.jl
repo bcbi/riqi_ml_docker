@@ -46,4 +46,4 @@ SimpleContainerGenerator.create_dockerfile(pkgs;
                                            julia_version = v"1.4.0",
                                            no_test = no_test)
 
-run(`docker build -t aluthge/riqi_ml .`)
+# run(`docker build -t aluthge/riqi_ml .`)
