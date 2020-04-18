@@ -5,16 +5,17 @@ mkpath("riqi_ml")
 cd("riqi_ml")
 
 pkgs = [
-    (name = "Clustering", version = "0.13.2"), 
-    (name = "Econometrics", version = "0.2.6"), 
-    (name = "MCMCChains", version = "3.0.12"), 
-    (name = "MultivariateStats", version = "0.7.0"),
+    (name = "Clustering", version = "0.13.2",), 
+    (name = "Econometrics", version = "0.2.6",), 
+    (name = "MCMCChains", version = "3.0.12",), 
+    (name = "MultivariateStats", version = "0.7.0",),
     (name = "Plots",), 
-    (name = "PredictMD", version = "0.34.16"), 
-    (name = "PredictMDExtra", version = "0.13.12"), 
-    (name = "PredictMDFull", version = "0.13.7"), 
+    (name = "PredictMD", version = "0.34.16",), 
+    (name = "PredictMDExtra", version = "0.13.12",), 
+    (name = "PredictMDFull", version = "0.13.7",), 
     (name = "StatsPlots",), 
-    (name = "Turing", version = "0.9.2"),
+    (name = "Turing", version = "0.9.2",),
+    (name = "UnicodePlots",),
 ]
 
 no_test = String[
@@ -28,6 +29,7 @@ no_test = String[
     "PredictMDFull",
     "StatsPlots",
     "Turing",
+    "UnicodePlots",
 ]
 
 exclude_from_sysimage = String[
