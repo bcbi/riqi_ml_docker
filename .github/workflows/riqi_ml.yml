@@ -36,3 +36,10 @@ jobs:
       - run: julia --project test_02.jl
       - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
         run: julia --project push_03.jl
+      - if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u bcbi --password-stdin
+      - run: docker tag aluthge/riqi_ml docker.pkg.github.com/bcbi/riqi_ml/riqi_ml
+      - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
+        run: docker push docker.pkg.github.com/bcbi/riqi_ml/riqi_ml
