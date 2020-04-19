@@ -2,9 +2,9 @@
 
 | Table of Contents |
 | ----------------- |
-| [1. Plots With the `Plots.jl` metapackage](#) |
-| [1.1. `UnicodePlots.jl` backend](#) |
-| [1.2. `GR.jl` backend](#) |
+| [1. Plots With the `Plots.jl` metapackage](#1-plots-with-the-plotsjl-metapackage) |
+| [1.1. `UnicodePlots.jl` backend](#11-unicodeplotsjl-backend) |
+| [1.2. `GR.jl` backend](#12-grjl-backend) |
 
 ## 1. Plots With the `Plots.jl` metapackage
 
