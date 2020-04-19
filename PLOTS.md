@@ -2,13 +2,32 @@
 
 | Table of Contents |
 | ----------------- |
-| [1. Plots With the `Plots.jl` metapackage](#1-plots-with-the-plotsjl-metapackage) |
-| [1.1. `UnicodePlots.jl` backend](#11-unicodeplotsjl-backend) |
-| [1.2. `GR.jl` backend](#12-grjl-backend) |
+| [1. `PredictMD.jl` machine learning framework]() |
+| [2. `Plots.jl` metapackage]() |
+| [2.1. `UnicodePlots.jl` backend for `Plots.jl`]() |
+| [2.2. `GR.jl` backend for `Plots.jl`]() |
 
-## 1. Plots With the `Plots.jl` metapackage
+## 1. `PredictMD.jl` machine learning framework
 
-### 1.1 `UnicodePlots.jl` backend
+```bash
+docker run -it -v /Users/MY_USERNAME/Desktop/my_folder:/mount/my_folder aluthge/riqi_ml /bin/bash
+```
+
+```julia
+julia> rocplottesting = PredictMD.plotroccurve(all_models,
+                                               testing_features_df,
+                                               testing_labels_df,
+                                               single_label_name,
+                                               positive_class);
+
+julia> PredictMD.save_plot("/mount/my_folder/my_plot.svg", rocplottesting)
+```
+
+The file `/mount/my_folder/my_plot.svg` inside the Docker container corresponds to the file `/Users/MY_USERNAME/Desktop/my_folder/my_plot.svg` on your computer. So open the file `/Users/MY_USERNAME/Desktop/my_folder/my_plot.svg` on your computer and you will see the plot.
+
+## 2. `Plots.jl` metapackage
+
+### 2.1. `UnicodePlots.jl` backend for `Plots.jl`
 
 ```bash
 docker run -it aluthge/riqi_ml /bin/bash
@@ -35,7 +54,7 @@ Warning: Keyword argument fillcolor not supported with Plots.UnicodePlotsBackend
 
 You can safely ignore those warnings.
 
-### 1.2 `GR.jl` backend
+### 2.2. `GR.jl` backend for `Plots.jl`
 
 ```bash
 docker run -it -v /Users/MY_USERNAME/Desktop/my_folder:/mount/my_folder aluthge/riqi_ml /bin/bash
