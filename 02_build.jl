@@ -1,1 +1,1 @@
-run(`docker build -t aluthge/riqi_ml .`)
+run(`docker build -t aluthge/riqi_ml riqi_ml`)
