@@ -43,3 +43,4 @@ jobs:
         run: docker --config ~/.dockerconfig1 push aluthge/riqi_ml
       - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
         run: docker --config ~/.dockerconfig2 push docker.pkg.github.com/bcbi/riqi_ml/riqi_ml
+        continue-on-error: true
