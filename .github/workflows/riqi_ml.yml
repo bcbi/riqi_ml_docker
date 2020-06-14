@@ -7,7 +7,8 @@ on:
       - staging
       - trying
   schedule:
-    - cron: '00 00 * * *'
+    - cron: '00 00,12 * * *'
+
 
 jobs:
   riqi_ml:
