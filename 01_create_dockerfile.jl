@@ -36,6 +36,7 @@ pkgs = [
 no_test = String[
     "BSON",
     "Clustering",
+    "DataFrames",
     "Econometrics",
     "FileIO",
     "Flux",
@@ -57,6 +58,8 @@ no_test = String[
     # "Torch",
     "Turing",
     "UnicodePlots",
+    "VegaDatasets",
+    "VegaLite",
 ]
 
 exclude_packages_from_sysimage = String[
