@@ -7,6 +7,7 @@ cd("riqi_ml")
 pkgs = [
     (name = "BSON", version = "* - *", ),
     (name = "Clustering", version = "0.14.0 - *", ),
+    (name = "DataFrames", version = "* - *", ),
     (name = "Econometrics", version = "0.2.6 - *", ),
     (name = "FileIO", version = "1.0.0 - *", ),
     (name = "Flux", version = "0.8.0 - *", ),
@@ -28,11 +29,14 @@ pkgs = [
     # (name = "Torch", version = "0.1.0 - *", ),
     (name = "Turing", version = "0.11.0 - *", ),
     (name = "UnicodePlots", version = "1.2.0 - *", ),
+    (name = "VegaDatasets", version = "* - *", ),
+    (name = "VegaLite", version = "* - *", ),
 ]
 
 no_test = String[
     "BSON",
     "Clustering",
+    "DataFrames",
     "Econometrics",
     "FileIO",
     "Flux",
@@ -54,6 +58,8 @@ no_test = String[
     # "Torch",
     "Turing",
     "UnicodePlots",
+    "VegaDatasets",
+    "VegaLite",
 ]
 
 exclude_packages_from_sysimage = String[
