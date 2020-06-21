@@ -1,4 +1,4 @@
-name: riqi_ml
+name: riqi_ml_docker
 on:
   pull_request:
   push:
@@ -9,9 +9,8 @@ on:
   schedule:
     - cron: '00 00,12 * * *'
 
-
 jobs:
-  riqi_ml:
+  riqi_ml_docker:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
