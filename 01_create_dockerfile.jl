@@ -67,9 +67,11 @@ parent_image = "nvidia/cuda:latest"
 
 julia_version = v"1.4.1"
 
-SimpleContainerGenerator.create_dockerfile(pkgs;
-                                           exclude_packages_from_sysimage = exclude_packages_from_sysimage,
-                                           julia_version = julia_version,
-                                           no_test = no_test,
-                                           output_directory = pwd()
-                                           parent_image = parent_image)
+SimpleContainerGenerator.create_dockerfile(
+    pkgs;
+    exclude_packages_from_sysimage = exclude_packages_from_sysimage,
+    julia_version = julia_version,
+    no_test = no_test,
+    output_directory = pwd(),
+    parent_image = parent_image,
+)
