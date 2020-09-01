@@ -2,5 +2,5 @@
 SimpleContainerGenerator = "b8d349fb-717b-4aac-a9b1-e1da4219c631"
 
 [compat]
-SimpleContainerGenerator = "1.1"
+SimpleContainerGenerator = "2"
 julia = "1.4"
