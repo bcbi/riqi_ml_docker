@@ -26,7 +26,6 @@ pkgs = [
     (name = "PredictMDFull", version = "0.13.7 - *", ),
     (name = "RecipesBase", version = "0.8.0 - *", ),
     (name = "StatsPlots", version = "0.14.5 - *", ),
-    # (name = "Torch", version = "0.1.0 - *", ),
     (name = "Turing", version = "0.11.0 - *", ),
     (name = "UnicodePlots", version = "1.2.0 - *", ),
     (name = "VegaDatasets", version = "* - *", ),
@@ -55,7 +54,6 @@ no_test = String[
     "PredictMDFull",
     "RecipesBase",
     "StatsPlots",
-    # "Torch",
     "Turing",
     "UnicodePlots",
     "VegaDatasets",
@@ -63,8 +61,6 @@ no_test = String[
 ]
 
 exclude_packages_from_sysimage = String[
-    # "Torch",
-    # "Torch_jll",
 ]
 
 parent_image = "nvidia/cuda:latest"
@@ -75,4 +71,5 @@ SimpleContainerGenerator.create_dockerfile(pkgs;
                                            exclude_packages_from_sysimage = exclude_packages_from_sysimage,
                                            julia_version = julia_version,
                                            no_test = no_test,
+                                           output_directory = pwd()
                                            parent_image = parent_image)
