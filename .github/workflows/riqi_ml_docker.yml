@@ -26,6 +26,8 @@ jobs:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
       - run: julia --project -e 'import Pkg; Pkg.instantiate()'
+        env:
+          JULIA_PKG_SERVER: ""
       - if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
