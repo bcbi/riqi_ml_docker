@@ -26,20 +26,20 @@ jobs:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
       - run: julia --project -e 'import Pkg; Pkg.instantiate()'
-      - if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
+      - if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker --config ~/.dockerconfig1 login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-      - if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
+      - if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker --config ~/.dockerconfig2 login docker.pkg.github.com -u bcbi --password-stdin
       - run: julia --project 01_create_dockerfile.jl
       - run: docker build -t aluthge/riqi_ml -t docker.pkg.github.com/bcbi/riqi_ml/riqi_ml riqi_ml
       - run: julia --project 03_test.jl
-      - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
+      - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         run: docker --config ~/.dockerconfig1 push aluthge/riqi_ml
-      - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'schedule')
+      - if: success() && github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         run: docker --config ~/.dockerconfig2 push docker.pkg.github.com/bcbi/riqi_ml/riqi_ml
         continue-on-error: true
