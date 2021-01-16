@@ -63,7 +63,7 @@ no_test = String[
 exclude_packages_from_sysimage = String[
 ]
 
-parent_image = "nvidia/cuda:latest"
+parent_image = "nvidia/cuda:11.2.0-devel-ubuntu20.04"
 
 julia_version = v"1.4.1"
 
